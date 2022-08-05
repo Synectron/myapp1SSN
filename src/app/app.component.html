@@ -1,0 +1,17 @@
+<div>
+  <label for="ssntest">S.S.N.</label><br />
+  <input
+    id="ssntest"
+    class="form-control"
+    type="text"
+    [(ngModel)]="ssn"
+    [patterns]="pattern"
+    [hiddenInput]="hidden"
+    mask="000-000-XXXX"
+  />
+  <br />
+  <button (click)="unhide()">
+    {{ hidden ? 'Show' : 'Hide' }}
+  </button>
+  {{ssn}}
+</div>
